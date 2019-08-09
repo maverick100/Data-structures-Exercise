@@ -144,13 +144,13 @@ int i,data;
 
   traverse();
 
-  /* delete_beg();
+  delete_beg();
   printf("\n");
   traverse();
   printf("\n" );
   delete_end();
   printf("\n");
-  traverse();  */
+  traverse();  
 
   reverse();
   traverse();
