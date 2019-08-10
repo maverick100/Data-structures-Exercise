@@ -24,9 +24,18 @@ struct node *insert(struct node *t,int x){
   }
   else if(x < t->key)
     t->left=insert(t->left,x);
-  else
+  else if(x>t->key)
     t->right=insert(t->right,x);
 
+}
+
+
+void inorder_print(struct node *inorder){
+  if(inorder != NULL){
+    inorder(inorder->left);
+    printf("%d\n",inorder->key );
+    inorder(inorder->right);
+  }
 }
 
 
@@ -36,5 +45,7 @@ void main(){
   root=insert(root,1);
   insert(root,2);
   insert(root,3);
+  printf("%d\n",root->key );
+  inorder_print(root)
 
 }
